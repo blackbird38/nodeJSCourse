@@ -56,7 +56,7 @@ router.route('/bears/:bearId')
             if (err) throw err;
             console.log(res2);
             if (res2.n > 0){
-                res.json({message: 'Bear successfuly added'});
+                res.json({message: 'Bear successfuly updated'});
             }else {
                 res.json({message: 'Bear could not be updated'});
             }
