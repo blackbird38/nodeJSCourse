@@ -62,6 +62,18 @@ router.route('/bears/:bearId')
             }
         });
     })
+    .delete((req, res) => { // e.g insomnia DELETE http://localhost:5000/api/bears/5ed65bc7d5819f04acd37fff
+        const query = {_id: req.params.bearId};
+        Bear.deleteOne(query, (err, res2) => {
+            if (err) throw err;
+            console.log(res2);
+            if (res2.n > 0){
+                res.json({message: 'Bear successfuly deleted'});
+            }else {
+                res.json({message: 'Bear could not be deleted'});
+            }
+        } )
+    })
 
 app.use('/api', router);
 

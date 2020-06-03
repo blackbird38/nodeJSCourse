@@ -2,7 +2,7 @@
 
 ```nodemon index.js```
 
-or, if nodemon is installed globally (with ```npm i nodemon```):
+or, if nodemon is installed globally (with ```npm i -g nodemon```):
 
 ```nodemon```
 

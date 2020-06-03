@@ -12,7 +12,7 @@ alternatives Express: koa, hapi, deno
 ```npm i nodemon```\
 ```npm i --save-dev nodemon```\
 ```npm i -g nodemon``` => simple ```nodemon``` in the dir\
-```nodemon index.js``` <=> ```npm run start:server```
+```nodemon index.js```
 
 or:\
 change in main.js:\
@@ -32,9 +32,11 @@ https://insomnia.rest
 
 ```npm i express mongoose```
 
+-----------------------------
 install mongodb:
-https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/\
-```mongo```
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
+
+https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/
 
 [-----------------------------
 
@@ -57,6 +59,10 @@ Vérifier le statut du service mongo :\
 
 ------------]\
 ```rm -rf node_modules```
+
+--------------------------------
+
+```sudo systemctl start mongod```
 
 --------------------------------
 https://mongoosejs.com/
