@@ -88,3 +88,23 @@ MONGO_URL : mongodb://user:user@<URL_DE_LA_BASE_MONGO>:27017/bearfriends_db
 ```
 
 -----------------]
+
+------------04books-----
+
+https://expressjs.com/fr/guide/using-template-engines.html
+
+```npm install pug```
+
+app.set('view engine', 'pug');
+
+
+-----------
+
+https://picturepan2.github.io/spectre/
+
+ link(rel="stylesheet", href='https://unpkg.com/spectre.css/dist/spectre.min.css')\
+link(rel='stylesheet', href='https://unpkg.com/spectre.css/dist/spectre-exp.min.css')\
+link(rel='stylesheet', href='https://unpkg.com/spectre.css/dist/spectre-icons.min.css')
+
+https://html2jade.org/
+

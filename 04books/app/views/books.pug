@@ -1,0 +1,8 @@
+extends layout
+block content
+    h1 Book List
+    each book in books
+        p= book.title
+        p= book.author
+        p= book.publicationYear
+        p= book.totalPageNumber

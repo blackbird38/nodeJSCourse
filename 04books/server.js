@@ -12,10 +12,16 @@ db.once('open', () => {
     console.log('MongoDB connected...');
 });
 
+app.use(express.static(__dirname + '/public'));
+app.set('view engine', 'pug');
+app.set('views', './app/views');
+
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
-
+app.get ('/', (req, res) => {
+    res.render('test', {message: 'Welcome here'})
+})
 const router = express.Router();
 
 
@@ -43,7 +49,7 @@ router.route('/books')
     .get((req, res) => { // // e.g insomnia GET http://localhost:5000/api/books/
         Book.find({}, (err, books) => {
             if (err) throw err; 
-            res.json(books);
+            res.render('books', {books: books} );
         });
     })
 router.route('/books/:bookId')
