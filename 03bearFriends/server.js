@@ -50,17 +50,27 @@ router.route('/bears/:bearId')
         });
     })
     .put((req, res) => { // e.g insomnia PUT http://localhost:5000/api/bears/5ed65bc7d5819f04acd37fff
-        const query = {_id: req.params.bearId};
+    /*  const query = {_id: req.params.bearId};
         const newBear = {$set: {_id: req.params.bearId, name: req.body.name}};
         Bear.updateOne(query, newBear, (err, res2) => {
             if (err) throw err;
             console.log(res2);
             if (res2.n > 0){
-                res.json({message: 'Bear successfuly updated'});
+                res.json({message: 'Bear successfuly updated: ' + req.body.name});
             }else {
-                res.json({message: 'Bear could not be updated'});
+                res.json({message: 'Bear could not be updated.'});
             }
-        });
+        });*/
+
+        Bear.findById(req.params.bearId, (err, bear) => {
+            if(err) throw (err);
+            const oldBearName = bear.name;
+            Object.assign(bear, req.body).save((err, updatedBear) => {
+                if(err) throw (err);
+                res.json({ message: `Bear ${oldBearName} successfuly updated.`, updatedBear });
+                });
+            });
+
     })
     .delete((req, res) => { // e.g insomnia DELETE http://localhost:5000/api/bears/5ed65bc7d5819f04acd37fff
         const query = {_id: req.params.bearId};
@@ -68,12 +78,12 @@ router.route('/bears/:bearId')
             if (err) throw err;
             console.log(res2);
             if (res2.n > 0){
-                res.json({message: 'Bear successfuly deleted'});
+                res.json({message: 'Bear successfuly deleted.'});
             }else {
-                res.json({message: 'Bear could not be deleted'});
+                res.json({message: 'Bear could not be deleted.'});
             }
-        } )
-    })
+        } );
+    });
 
 app.use('/api', router);
 
