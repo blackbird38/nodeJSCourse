@@ -7,7 +7,7 @@
 ```touch .gitignore && echo 'node_modules' >> .gitignore```\
 ```npm i express```
 
-alternatives Express: koa, hapi, deno
+alternatives Express: ```koa, hapi, deno```
 
 ```npm i nodemon```\
 ```npm i --save-dev nodemon```\
@@ -30,6 +30,10 @@ https://insomnia.rest
 
 ----------bearFriends DB--------
 
+
+
+----------------------MongoDB & mongoose---------------
+
 ```npm i express mongoose```
 
 -----------------------------
@@ -38,7 +42,7 @@ https://docs.mongodb.com/manual/tutorial/install-mongodb-on-ubuntu/
 
 https://docs.mongodb.com/manual/tutorial/install-mongodb-on-debian/
 
-[-----------------------------
+[----------------------------------------------------
 
 Supprimer l'ancienne config mongodb :\
     ```sudo mv /var/lib/mongodb /var/lib/mongodb_backup```\
@@ -57,7 +61,7 @@ Installation de MongoDb 4.2 sur un environnement Ubuntu 18.04 :\
 Vérifier le statut du service mongo :\
     ```sudo systemctl status mongod```
 
-------------]\
+------------------------------------------------------]\
 ```rm -rf node_modules```
 
 --------------------------------
@@ -67,7 +71,8 @@ Vérifier le statut du service mongo :\
 --------------------------------
 https://mongoosejs.com/
 
-```mongo```\
+```mongo```
+
 > ```>show dbs```\
 > ```>use bearfriends_db```\
 > ```>show collections```\
@@ -87,33 +92,45 @@ db.createUser({
 MONGO_URL : mongodb://user:user@<URL_DE_LA_BASE_MONGO>:27017/bearfriends_db
 ```
 
------------------]
+------------------------------------------------------]
+
 
 ------------04books-----
 
+
+-------------------------Pug, Spectre.css---------------------
+
 https://expressjs.com/fr/guide/using-template-engines.html
+
+
+---------------
+
+https://pugjs.org/api/getting-started.html
 
 ```npm install pug```
 
 app.set('view engine', 'pug');
 
-
 -----------
 
 https://picturepan2.github.io/spectre/
 
- link(rel="stylesheet", href='https://unpkg.com/spectre.css/dist/spectre.min.css')\
-link(rel='stylesheet', href='https://unpkg.com/spectre.css/dist/spectre-exp.min.css')\
+```
+link(rel="stylesheet", href='https://unpkg.com/spectre.css/dist/spectre.min.css')
+link(rel='stylesheet', href='https://unpkg.com/spectre.css/dist/spectre-exp.min.css')
 link(rel='stylesheet', href='https://unpkg.com/spectre.css/dist/spectre-icons.min.css')
+```
 
 https://html2jade.org/
 
 ----------------
-
-https://shieldfy.io/blog/template-engines-nodejs-developers/
+Alternatives to Pug: https://shieldfy.io/blog/template-engines-nodejs-developers/
 
 -------07Instagram----------
 
-```npm install cors```
-```npm install -D express-validator```
+
+-------------------------cors, express-validator, multer---------------------
+
+```npm install cors```\
+```npm install -D express-validator```\
 ```npm install multer```
