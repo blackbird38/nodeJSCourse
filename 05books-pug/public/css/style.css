@@ -9,14 +9,26 @@ img {
 a { 
     text-decoration: none; 
 }
-#green {
-    background-color: aquamarine;
+
+h1 {
+    text-align: center;
+}
+ 
+.pages {
+    font-size: 0.95rem;
 }
 
-/*
-.container {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}*/
+.my-button {
+    margin: 0.5rem;
+    width: 5rem;
+}
+
+.card {
+    margin-bottom: 1rem;
+}
+
+form {
+    width: 60%;
+    margin: auto;
+    text-align: right;
+}

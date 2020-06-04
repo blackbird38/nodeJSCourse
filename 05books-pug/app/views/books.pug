@@ -1,7 +1,6 @@
 extends layout
 block content
   h1 Books
-    a.btn.btn-primary(href='/api/books/add')  Add
         each book in books
             a(href=`/api/books/${book.id}`)
             .container
@@ -17,6 +16,8 @@ block content
                                         = book.title
                                         br
                                         = book.publicationYear
+                                        br
+                                        span.pages #{book.totalPageNumber} pages
                                     .card-footer
-                                        a.btn.btn-primary(href=`/api/books/${book.id}/edit`) edit
-                                        a.btn.btn-primary(href=`/api/books/${book.id}/delete`) delete
+                                        a.btn.btn-primary.my-button(href=`/api/books/${book.id}/edit`) Edit
+                                        a.btn.btn-primary.my-button(href=`/api/books/${book.id}/delete`) Delete
