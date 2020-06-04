@@ -112,3 +112,8 @@ https://html2jade.org/
 
 https://shieldfy.io/blog/template-engines-nodejs-developers/
 
+-------07Instagram----------
+
+```npm install cors```
+```npm install -D express-validator```
+```npm install multer```
