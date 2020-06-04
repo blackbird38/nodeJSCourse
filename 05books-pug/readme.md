@@ -2,6 +2,8 @@
 
 to start the server: ```nodemon server.js```
 
+http://localhost:5000/api/books
+
 Books Project - CRUD NodeJS (MongoDB, Express, Pug)
 
 ![alt text](https://1.bp.blogspot.com/-nJ2bPKHo38g/XtkvDi9ykWI/AAAAAAAAAUo/WkPbaJ5UUkI2AMQFSxLJlPRigMiQJmOiwCLcBGAsYHQ/s640/Capture01.JPG)
