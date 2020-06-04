@@ -1,0 +1,23 @@
+extends layout
+block content
+  h1 Patisserie
+    a(href=`/api/patisseries/${patisserie._id}`)
+          .container
+             .columns
+                .column.col-6.col-mx-auto
+                    .card
+                        .card-image
+                            img.img-responsive(src='https://img.over-blog-kiwi.com/1/53/49/95/20170125/ob_50ac0b_arton59059-d2073.jpg')
+                        .card-header
+                                .card-title.h5= patisserie.address
+                                .card-subtitle.text-gray
+                                .card-body
+                                    = patisserie.name
+                                    br
+                                    = patisserie.openHour
+                                    br
+                                    = patisserie.closeHour
+                                .card-footer
+                                    button.btn.btn-primary edit
+                                    button.btn.btn-primary delete
+                    a.btn.btn-primary(href='/api/patisseries') back

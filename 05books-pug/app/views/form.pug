@@ -1,0 +1,9 @@
+extends layout
+block content
+    .form-group
+    form(action='/api/books/add', method='post')
+        input.form-input(type='text', name='title', placeholder='Type the title')
+        input.form-input(type='text', name='author', placeholder='Type the author')
+        input.form-input(type='number', name='publicationYear', placeholder='Type the publication year')
+        input.form-input(type='number', name='totalPageNumber', placeholder='Type the number of pages')
+        button.btn.btn-primary.input_group-btn(type='submit') Add 

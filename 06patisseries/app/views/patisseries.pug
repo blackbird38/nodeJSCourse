@@ -1,0 +1,22 @@
+extends layout
+block content
+  h1 Les pâtisseries du bonheur
+        each patisserie in patisseries
+            a(href=`/api/patisseries/${patisserie.id}`)
+            .container
+                .columns
+                    .column.col-6.col-mx-auto
+                        .card
+                            .card-image
+                                img.img-responsive(src='/images/ob_50ac0b_arton59059-d2073.jpg')
+                            .card-header
+                                    .card-title.h5
+                                     p Address: #{patisserie.address} 
+                                    .card-subtitle.text-gray.h6
+                                    .card-body.h3
+                                        span.color= patisserie.name
+                                        br
+                                        p.h5.hours Open hours: #{patisserie.openHour} - #{patisserie.closeHour}
+                                    .card-footer
+                                        a.btn.btn-primary(href=`/api/patisseries/${patisserie.id}/edit`) edit
+                                        a.btn.btn-primary(href=`/api/patisseries/${patisserie.id}/delete`) delete

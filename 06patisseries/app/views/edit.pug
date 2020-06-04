@@ -1,0 +1,10 @@
+extends layout
+block content
+      h1 Update
+        .form-group
+        form(action=`/api/patisseries/${patisserie.id}`, method='post')
+            input.form-input(type='text', name='name', value=`${patisserie.name}` placeholder=`${patisserie.name}`)
+            input.form-input(type='text', name='address', value=`${patisserie.address}`  placeholder=`${patisserie.placeholder}`)
+            input.form-input(type='number', name='openHour', value=`${patisserie.openHour}` placeholder=`${patisserie.openHour}`)
+            input.form-input(type='number', name='closeHour', value=`${patisserie.closeHour}` placeholder=`${patisserie.closeHour}`)
+            button.btn.btn-primary.input_group-btn(type='submit') Update

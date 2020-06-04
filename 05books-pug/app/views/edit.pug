@@ -1,0 +1,9 @@
+extends layout
+block content
+    .form-group
+    form(action=`/api/books/${book.id}`, method='post')
+        input.form-input(type='text', name='title', value=`${book.title}` placeholder=`${book.title}`)
+        input.form-input(type='text', name='author', value=`${book.author}`  placeholder=`${book.placeholder}`)
+        input.form-input(type='number', name='publicationYear', value=`${book.publicationYear}` placeholder=`${book.publicationYear}`)
+        input.form-input(type='number', name='totalPageNumber', value=`${book.totalPageNumber}` placeholder=`${book.totalPageNumber}`)
+        button.btn.btn-primary.input_group-btn(type='submit') Update

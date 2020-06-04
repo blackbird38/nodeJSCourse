@@ -1,0 +1,22 @@
+body {
+    background-color: white;
+}
+
+img {
+    width: 100%;
+}   
+
+a { 
+    text-decoration: none; 
+}
+#green {
+    background-color: aquamarine;
+}
+
+/*
+.container {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}*/

@@ -1,0 +1,22 @@
+extends layout
+block content
+  h1 Books
+    a.btn.btn-primary(href='/api/books/add')  Add
+        each book in books
+            a(href=`/api/books/${book.id}`)
+            .container
+                .columns
+                    .column.col-6.col-mx-auto
+                        .card
+                            .card-image
+                                img.img-responsive(src='/images/ob_50ac0b_arton59059-d2073.jpg')
+                            .card-header
+                                    .card-title.h5= book.author 
+                                    .card-subtitle.text-gray.h6
+                                    .card-body.h3
+                                        = book.title
+                                        br
+                                        = book.publicationYear
+                                    .card-footer
+                                        a.btn.btn-primary(href=`/api/books/${book.id}/edit`) edit
+                                        a.btn.btn-primary(href=`/api/books/${book.id}/delete`) delete

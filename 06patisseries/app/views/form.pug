@@ -1,0 +1,10 @@
+extends layout
+block content
+      h1 Add new
+        .form-group
+        form(action='/api/patisseries/add', method='post')
+            input.form-input(type='text', name='name', placeholder='Type the name')
+            input.form-input(type='text', name='address', placeholder='Type the address')
+            input.form-input(type='number', name='openHour', placeholder='Type the openHour')
+            input.form-input(type='number', name='closeHour', placeholder='Type the closeHour')
+            button.btn.btn-primary.input_group-btn(type='submit') Add 
