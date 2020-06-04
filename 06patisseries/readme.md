@@ -2,7 +2,9 @@
 
 to start the server: ```nodemon server.js```
 
-NodeJS CRUD Exo
+http://localhost:5000/api/patisseries
+
+NodeJS CRUD Exo (MongoDB, Express, Pug)
 
 ![alt text](https://1.bp.blogspot.com/-Ozp0P52rKlo/Xtj84LJsfRI/AAAAAAAAAUU/a0hYumQupE4vykd5Gw1BqsQLuSRjZQHywCLcBGAsYHQ/s640/Capture01.JPG)
 
