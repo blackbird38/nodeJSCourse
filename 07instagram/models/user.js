@@ -5,17 +5,21 @@ const Schema = mongoose.Schema;
 const UserSchema = new Schema({
     email: {type: String, required: true},
     password: {type: String, required: true, select: false},
-    name: {type: String, required: true}
+    name: {type: String, required: true},
+    following: [{type: Schema.Types.ObjectId, ref: 'user'}]
 });
 
 UserSchema.methods.encryptPassword = async password => {
-    const salt = await bcrypt.getSalt(5);
+    const salt = await bcrypt.genSalt(5);
+    console.log(salt);
     const hash = await bcrypt.hash(password, salt);
+    console.log(hash);
     return hash;
 }
 
-UserSchema.methods.validPassword = async(candidatePassword) => {
-    const result = await bcrypt.compare(candidatePassword, this.password);
+UserSchema.methods.validPassword = async(candidatePassword, realPassword) => {
+    const result = await bcrypt.compare(candidatePassword, realPassword);
+    console.log(result);
     return result;
 };
 

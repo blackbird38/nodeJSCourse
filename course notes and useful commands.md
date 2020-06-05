@@ -141,6 +141,7 @@ https://jwt.io/
 
 ```npm i bcryptjs```\
 ```npm i passport-jwt```
+```npm i jwt-simple```
 
 
 ```req.params```\
