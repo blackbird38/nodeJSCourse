@@ -1,6 +1,6 @@
 module.exports = (error, req, res, next) => {
     const status = error.statusCode || 500;
-    const message = error.message;
+    const message = 'You have a pretty error: ' + error.message;
     const data = error.data;
     const validation = error.validation;
     res.status(status).json({
