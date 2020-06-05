@@ -1,0 +1,1 @@
+import Insomnia-All_2020-06-05.json in insomnia to have all the requests for all the projects available
