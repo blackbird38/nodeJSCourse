@@ -62,3 +62,12 @@ exports.me =  async (req, res, next) => {
       next(err);
     }
   };
+
+  exports.getAll = async (req, res) => { // insomnia GET http://localhost:3000/api/user/
+    try {
+        const users = await User.find();
+        res.send(users);
+    }catch(err) {
+        next(err);
+    }
+};
