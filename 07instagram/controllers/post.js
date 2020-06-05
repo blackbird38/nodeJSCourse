@@ -34,5 +34,20 @@ exports.store = async (req, res, next) => { // insomnia POST multipart (descript
     }catch(err) {
         next(err);
     }
+};
 
+exports.update = async (req, res, next) => { // insomnia PATCH json (description ) http://localhost:3000/api/post
+    try {
+        validationHandler(req);
+        let post = new Post();
+        post = await Post.findById({
+            _id: req.params.id
+        });
+        
+        post.description = req.body.description;
+        post = await post.save();
+        res.send(post);
+    }catch(err) {
+        next(err);
+    }
 };
