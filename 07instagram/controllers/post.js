@@ -36,7 +36,7 @@ exports.store = async (req, res, next) => { // insomnia POST multipart (descript
     }
 };
 
-exports.update = async (req, res, next) => { // insomnia PATCH json (description ) http://localhost:3000/api/post
+exports.update = async (req, res, next) => { // insomnia PATCH json (description ) http://localhost:3000/api/post/id
     try {
         validationHandler(req);
         let post = new Post();
@@ -47,6 +47,17 @@ exports.update = async (req, res, next) => { // insomnia PATCH json (description
         post.description = req.body.description;
         post = await post.save();
         res.send(post);
+    }catch(err) {
+        next(err);
+    }
+};
+
+exports.delete = async (req, res, next) => { // insomnia DELETE  http://localhost:3000/api/post/id
+    try {
+        validationHandler(req);
+        let post = await Post.findById(req.params.id);
+        await post.delete();
+        res.send({message: 'Delete successful.'});
     }catch(err) {
         next(err);
     }
