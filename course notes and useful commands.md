@@ -139,9 +139,7 @@ Alternatives to Pug: https://shieldfy.io/blog/template-engines-nodejs-developers
 https://jwt.io/
 
 ```npm i bcryptjs```\
-
-
-
+```npm i passport-jwt```
 
 
     ```req.params```\
